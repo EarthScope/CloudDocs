@@ -1,4 +1,5 @@
-Documentation
+..EarthScope Documentation master file
+
 Welcome to EarthScope's Cloud Data and Developer Documentation Center. 
 
 
