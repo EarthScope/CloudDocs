@@ -15,4 +15,5 @@ python:
 
 sphinx:
   builder: html
+  configuration: _config.yml
   fail_on_warning: true
