@@ -3,3 +3,5 @@
 
 format: jb-book
 root: intro
+parts:
+- caption: GeoLab : {{ geolab_docs_url }}
