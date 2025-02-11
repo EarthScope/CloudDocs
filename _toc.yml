@@ -4,4 +4,4 @@
 format: jb-book
 root: intro
 parts:
-- caption: GeoLab : {{ geolab_docs_url }}
+- caption: [GeoLab](https://docs.earthscope.org/projects/GeoLab/)
