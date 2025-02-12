@@ -10,6 +10,6 @@ parts:
 # - caption: EarthScope Cloud Resources
 #   chapters:
   - url: https://docs.earthscope.org/projects/GeoLab/
-  title: GeoLab
+  # title: GeoLab
   - url: https://docs.earthscope.org/projects/SDK-beta/
-  title: SDK-beta
+  # title: SDK-beta
