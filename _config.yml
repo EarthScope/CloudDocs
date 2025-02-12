@@ -13,6 +13,7 @@ parse:
     jupyterhub_url: https://geolab.earthscope.cloud/hub/
     website_url: https://www.earthscope.org/data/geolab/
     sdkbeta_docs_url: https://docs.earthscope.org/projects/SDK-beta/
+    api_docs_url: https://docs.earthscope.org/projects/API/
 
 
 # Force re-execution of notebooks on each build.

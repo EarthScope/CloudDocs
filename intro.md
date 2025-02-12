@@ -12,5 +12,5 @@ Learn more about EarthScope's Cloud Migration by visiting https://www.earthscope
 :class: seealso
 * GeoLab, EarthScope's JupyterHub: {{ geolab_docs_url }}
 * EarthScope SDK(beta): {{ sdkbeta_docs_url }}
-* EarthScope API: docs coming soon
+* EarthScope API: {{ api_docs_url }}
 ```

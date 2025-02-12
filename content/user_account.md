@@ -1,4 +1,4 @@
-# Getting Started with EarthScope Cloud Tools
+# User Account Creation
 
 Welcome to EarthScope Cloud! 
 
