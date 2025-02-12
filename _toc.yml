@@ -3,8 +3,12 @@
 
 format: jb-book
 root: intro
-chapters:
-- url: https://docs.earthscope.org/projects/GeoLab/
-title: GeoLab
-- url: https://docs.earthscope.org/projects/SDK-beta/
-title: SDK-beta
+- caption: Getting Started
+  chapters:
+  - file: content/getting_started
+- caption: EarthScope Cloud Resources
+  chapters:
+  - url: https://docs.earthscope.org/projects/GeoLab/
+  title: GeoLab
+  - url: https://docs.earthscope.org/projects/SDK-beta/
+  title: SDK-beta
