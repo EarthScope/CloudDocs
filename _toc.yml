@@ -3,5 +3,8 @@
 
 format: jb-book
 root: intro
-parts:
-- caption: [GeoLab](https://docs.earthscope.org/projects/GeoLab/)
+chapters:
+- url: https://docs.earthscope.org/projects/GeoLab/
+title: GeoLab
+- url: https://docs.earthscope.org/projects/SDK-beta/
+title: SDK-beta
