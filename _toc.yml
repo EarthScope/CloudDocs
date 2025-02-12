@@ -3,6 +3,7 @@
 
 format: jb-book
 root: intro
+parts:
 - caption: Getting Started
   chapters:
   - file: content/getting_started
