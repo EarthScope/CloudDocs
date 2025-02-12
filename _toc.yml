@@ -6,7 +6,7 @@ root: intro
 parts:
 - caption: Getting Started
   chapters:
-  - file: content/getting_started
+  - file: content/user_account
 - caption: EarthScope Cloud Resources
   chapters:
   - url: https://docs.earthscope.org/projects/GeoLab/
