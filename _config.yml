@@ -46,4 +46,13 @@ html:
 only_build_toc_files: true
 
 sphinx:
-  extra_extensions: sphinx.ext.intersphinx
+  intersphinx_mapping:
+    api:
+      - "https://docs.earthscope.org/projects/API/"
+      - null
+    sdkb:
+      - "https://docs.earthscope.org/projects/SDK-beta/"
+      - null
+    geolab:
+      - "https://docs.earthscope.org/projects/GeoLab/"
+      - null
