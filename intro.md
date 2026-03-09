@@ -1,6 +1,6 @@
 # Welcome to EarthScope's Cloud Data and Developer Documentation Center!
 
-```{Note}
+```{note}
 This [JupyterBook](https://jupyterbook.org/en/stable/intro.html) is in development as we configure our cloud documentation center.
 ```
 

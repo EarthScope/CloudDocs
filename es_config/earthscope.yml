@@ -1,0 +1,123 @@
+version: 1
+project:
+  open_access: true
+  license:
+    content: CC-BY-4.0
+    code: Apache-2.0
+  references:
+    foundations: https://foundations.projectpythia.org
+    xarray: https://docs.xarray.dev/en/stable/
+    matplotlib: https://matplotlib.org/stable/
+    python: https://docs.python.org/3/
+  jupyter:
+    binder:
+      url: https://binder.projectpythia.org/
+  contributors:
+    - name: Brian E. J. Rose
+      id: brian-rose
+      github: brian-rose
+      orcid: 0000-0002-9961-3821
+      email: 'brose@albany.edu'
+      affiliations: UAlbany
+      url: https://brian-rose.github.io
+      bluesky: '@brianejrose.bsky.social'
+      linkedin: https://www.linkedin.com/in/brian-rose-37bb55106/
+    - name: John Clyne
+      id: clyne
+      github: clyne
+      orcid: 0000-0003-2788-9017
+      affiliations: CISL
+    - name: Julia Kent
+      id: jukent
+      github: jukent
+      orcid: 0000-0002-5611-8986
+      affiliation: CISL
+  affiliations:
+    - id: UAlbany
+      name: University at Albany (SUNY)
+      department: Atmospheric and Environmental Sciences
+      url: https://www.albany.edu/daes
+    - id: CISL
+      name: NSF National Center for Atmospheric Research 
+      department: Computational and Information Systems Lab
+      url: https://www.cisl.ucar.edu
+    - id: Unidata
+      name: NSF Unidata
+      url: https://www.unidata.ucar.edu
+    - id: Argonne
+      name: Argonne National Laboratory
+      department: Environmental Science Division
+      url: https://www.anl.gov/evs
+    - id: CarbonPlan
+      name: CarbonPlan
+      url: https://carbonplan.org
+    - id: NVIDIA
+      name: NVIDIA Corporation
+      url: https://www.nvidia.com/
+  error_rules:
+    - rule: link-resolves
+      severity: ignore
+      keys:
+        - 'https://doi.org/**'
+        - 'https://zenodo.org/**'
+    - rule: doi-link-valid
+      severity: ignore
+      keys:
+        - 'https://zenodo.org/**'   # also suppress the DOI validation error
+    
+site:
+  template: book-theme
+  options:
+    folders: true
+    favicon: https://raw.githubusercontent.com/ProjectPythia/pythia-config/main/favicon.ico
+    logo: https://raw.githubusercontent.com/ProjectPythia/pythia-config/main/logos/pythia_logo-white-rtext-blue.svg
+    logo_dark: https://raw.githubusercontent.com/ProjectPythia/pythia-config/main/logos/pythia_logo-white-rtext.svg
+    logo_url: https://projectpythia.org
+    analytics_google: G-T52X8HNYE8 # Measurement ID for Cookbooks
+    internal_domains: "projectpythia.org"  
+  nav:
+    - title: Home
+      url: https://projectpythia.org
+    - title: Foundations
+      url: https://foundations.projectpythia.org
+      open_in_same_tab: true
+    - title: Cookbooks
+      url: https://cookbooks.projectpythia.org/
+      open_in_same_tab: true
+    - title: Resources
+      url: https://projectpythia.org/resource-gallery/
+    - title: Community
+      url: https://projectpythia.org/#join-us
+  actions:
+    - title: Project Pythia
+      url: https://projectpythia.org
+
+  parts:
+    footer: |
+        :::::{grid} 3
+        :class: items-center
+
+
+        ```{image} https://raw.githubusercontent.com/ProjectPythia/pythia-config/main/logos/NSF-NCAR.png
+        :alt: NCAR Logo
+        ```
+
+        ```{image} https://raw.githubusercontent.com/ProjectPythia/pythia-config/main/logos/NSF-Unidata.png
+        :alt: Unidata Logo
+        ```
+
+        ```{image} https://raw.githubusercontent.com/ProjectPythia/pythia-config/main/logos/UAlbany.svg
+        :alt: UAlbany Logo
+        ```
+        :::::
+
+        :::::{div}
+        :class: flex items-center gap-4 text-disclaimer
+
+        ```{image} https://raw.githubusercontent.com/ProjectPythia/pythia-config/main/logos/nsf.jpg
+        :alt: NSF Logo
+        :height: 60px
+        ```
+
+        This material is based upon work supported by the National Science Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+        :::::
