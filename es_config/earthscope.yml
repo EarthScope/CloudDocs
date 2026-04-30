@@ -1,4 +1,4 @@
-##THIS FILE IS A TEMPLATE PLACEHOLDER!
+# Shared configuration file for all EarthScope repositories that feed into docs.earthscope.org
 
 version: 1
 project:
@@ -20,10 +20,14 @@ site:
       url: https://docs.earthscope.org
     - title: GeoLab
       url: https://docs.earthscope.org/projects/GeoLab
-      open_in_same_tab: true
+      # open_in_same_tab: true
     - title: API
       url: https://docs.earthscope.org/projects/API
-      open_in_same_tab: true
+      # open_in_same_tab: true
     - title: SDK
       url: https://docs.earthscope.org/projects/SDK
-      open_in_same_tab: true
+      # open_in_same_tab: true
+
+  # parts:
+  #     # This needs to point to a github raw file because other sites extend it, and this ensures it resolves for them
+  #     footer: ./es_config/es_footer.md

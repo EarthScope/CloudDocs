@@ -1,14 +1,13 @@
 version: 1
+extends:
+  - ./es_config/earthscope.yml
 project:
   title: EarthScope Cloud Documentation Center
-  authors:
-    - name: EarthScope On-Ramp Project Group
-  copyright: '2024'
+  # authors:
+  #   - name: EarthScope On-Ramp Project Group
+  copyright: '2024-2026'
   github: EarthScope/CloudDocs
-  exports:
-    - format: pdf
-      template: plain_latex_book
-      output: exports/book.pdf
+
   toc:
     - file: intro.md
     - title: Getting Started
@@ -24,8 +23,8 @@ project:
     #       title: EarthScope CLI
     #     - url: https://docs.earthscope.org/projects/SDK
     #       title: EarthScope SDK
-site:
-  options:
-    logo: es_config/logos/cloud_logo_simple_small.png
-    folders: true
-  template: book-theme
+# site:
+#   options:
+#     logo: es_config/logos/cloud_logo_simple_small.png
+#     folders: true
+#   template: book-theme
