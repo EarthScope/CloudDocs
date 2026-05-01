@@ -27,7 +27,3 @@ site:
     - title: SDK
       url: https://docs.earthscope.org/projects/SDK
       # open_in_same_tab: true
-
-  # parts:
-  #     # This needs to point to a github raw file because other sites extend it, and this ensures it resolves for them
-  #     footer: ./es_config/es_footer.md

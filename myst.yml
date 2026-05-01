@@ -1,5 +1,6 @@
 version: 1
 extends:
+  #TODO: update this to static github url
   - ./es_config/earthscope.yml
 project:
   title: EarthScope Cloud Documentation Center
@@ -10,9 +11,10 @@ project:
 
   toc:
     - file: intro.md
-    - title: Getting Started
-      children:
-        - file: content/user_account.md
+    # - title: Getting Started
+    #   children:
+    - file: content/user_account.md
+    - file: content/citation.md
     # - title: EarthScope Cloud Resources
     #   children:
     #     - url: https://docs.earthscope.org/projects/GeoLab
