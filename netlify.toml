@@ -1,0 +1,58 @@
+[build]
+  command = "jupyter book build --html"
+  publish = "_build/html"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
+
+# /onramp/geolab
+[[redirects]]
+  from = "/onramp/geolab"
+  to = "https://docs.earthscope.org/projects/GeoLab/en/latest/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/onramp/geolab/*"
+  to = "https://docs.earthscope.org/projects/GeoLab/en/latest/:splat"
+  status = 200
+  force = true
+
+# /api
+[[redirects]]
+  from = "/api"
+  to = "https://docs.earthscope.org/projects/API/en/latest/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/*"
+  to = "https://docs.earthscope.org/projects/API/en/latest/:splat"
+  status = 200
+  force = true
+
+# /data-access/cli
+[[redirects]]
+  from = "/data-access/cli"
+  to = "https://docs.earthscope.org/projects/CLI/en/latest/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/data-access/cli/*"
+  to = "https://docs.earthscope.org/projects/CLI/en/latest/:splat"
+  status = 200
+  force = true
+
+# /data-access/sdk
+[[redirects]]
+  from = "/data-access/sdk"
+  to = "https://docs.earthscope.org/projects/SDK/en/latest/"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/data-access/sdk/*"
+  to = "https://docs.earthscope.org/projects/SDK/en/latest/:splat"
+  status = 200
+  force = true
