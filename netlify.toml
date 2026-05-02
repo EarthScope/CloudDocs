@@ -8,13 +8,13 @@
 # /onramp/geolab
 [[redirects]]
   from = "/onramp/geolab"
-  to = "https://earthscope-consortium-geolab-standalone.readthedocs-hosted.com/en/latest/"
+  to = "https://earthscope-consortium-geolab-standalone.readthedocs-hosted.com"
   status = 200
   force = true
 
 [[redirects]]
   from = "/onramp/geolab/*"
-  to = "https://earthscope-consortium-geolab-standalone.readthedocs-hosted.com/en/latest/:splat"
+  to = "https://earthscope-consortium-geolab-standalone.readthedocs-hosted.com/:splat"
   status = 200
   force = true
 
