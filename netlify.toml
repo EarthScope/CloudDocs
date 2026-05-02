@@ -8,8 +8,8 @@
 # /onramp/geolab
 [[redirects]]
   from = "/onramp/geolab"
-  to = "https://earthscope-consortium-geolab-standalone.readthedocs-hosted.com/en/latest/"
-  status = 200
+  to = "/onramp/geolab/"
+  status = 301
   force = true
 
 [[redirects]]
