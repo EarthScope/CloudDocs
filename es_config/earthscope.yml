@@ -11,6 +11,7 @@ site:
   template: book-theme
   options:
     folders: true
+    favicon: https://www.earthscope.org/app/uploads/2022/12/cropped-favicon-32x32.png
     logo: https://www.earthscope.org/app/uploads/2025/11/NSFNGF-Logo-RGB-Color.svg
     logo_dark: https://www.earthscope.org/app/uploads/2025/11/NSFNGF-Logo-RGB-White.svg
     logo_url: https://docs.earthscope.org
