@@ -15,6 +15,7 @@ site:
     logo: https://www.earthscope.org/app/uploads/2025/11/NSFNGF-Logo-RGB-Color.svg
     logo_dark: https://www.earthscope.org/app/uploads/2025/11/NSFNGF-Logo-RGB-White.svg
     logo_url: https://docs.earthscope.org
+    internal_domains: docs.earthscope.org
 
   nav:
     - title: Home
