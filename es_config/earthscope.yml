@@ -19,7 +19,7 @@ site:
 
   nav:
     - title: Home
-      url: https://docs.earthscope.org
+      url: /
     - title: GeoLab
       url: /onramp/geolab
       # open_in_same_tab: true
