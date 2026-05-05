@@ -21,11 +21,11 @@ site:
     - title: Home
       url: https://docs.earthscope.org
     - title: GeoLab
-      url: https://docs.earthscope.org/projects/GeoLab
+      url: /onramp/geolab
       # open_in_same_tab: true
     - title: API
-      url: https://docs.earthscope.org/projects/API
+      url: /data-access/API
       # open_in_same_tab: true
     - title: SDK
-      url: https://docs.earthscope.org/projects/SDK
+      url: /data-access/SDK
       # open_in_same_tab: true
