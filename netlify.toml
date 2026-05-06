@@ -5,6 +5,10 @@
 [build.environment]
   NODE_VERSION = "20"
 
+[[edge_functions]]
+  function = "inject-prefetch"
+  path = "/*"
+
 # /onramp/geolab
 [[redirects]]
   from = "/geolab"
