@@ -1,25 +1,35 @@
 
 /**
- * Netlify Edge Function: inject Speculation Rules into every HTML response.
+ * Netlify Edge Function: inject Speculation Rules and cross-document View
+ * Transitions into every HTML response.
  *
  * Why
  * ---
- * This site's top nav links to sibling docs sites (GeoLab, CLI, SDK, API) that
- * are served via Netlify rewrites to other Netlify deployments. Cross-site
- * navigation is therefore slower than in-site navigation. Speculation Rules
- * (https://developer.mozilla.org/docs/Web/API/Speculation_Rules_API) tell
- * Chromium browsers to prefetch matching URLs on hover/touchstart, hiding most
- * of that latency. Non-Chromium browsers ignore the script.
+ * 1. MyST `book-theme` static builds (`myst build --html`) do full document
+ *    reloads on every link click — there's no SPA hydration in static mode
+ *    (see jupyter-book/mystmd#188). That produces a visible white flash on
+ *    same-site navigation. Speculation Rules with `eagerness: moderate`
+ *    prefetch likely-next pages on hover so the click navigation is
+ *    network-instant; cross-document View Transitions then crossfade between
+ *    documents so the paint transition is also smooth.
+ * 2. The top nav also links to sibling docs sites (GeoLab, CLI, SDK, API)
+ *    served via Netlify rewrites to other Netlify deployments. Prefetching
+ *    those is genuinely useful since the rewrite adds latency.
+ *
+ * Both features are progressive enhancements: browsers that don't support
+ * Speculation Rules or cross-document View Transitions silently ignore them.
+ * Today that's mainly Chromium-only support; Firefox and Safari just see a
+ * normal MyST static build.
  *
  * How
  * ---
- * The MyST `book-theme` embeds the resolved site config (including the nav
- * array) directly into each rendered HTML page for client-side hydration. We
- * scrape that `"nav":[...]` blob with a regex, normalize each entry's URL to a
- * same-origin path (so prefetches stay on whatever domain is currently serving
- * the site — important for staging/preview deploys), and emit a
- * <script type="speculationrules"> targeting those paths plus a `/*` wildcard
- * under each one for deeper pages.
+ * - Speculation Rules: scrape the embedded `"nav":[...]` blob from MyST's
+ *   hydration data with a regex, normalize each entry to a same-origin path,
+ *   emit `<script type="speculationrules">` for those paths plus `/*` wildcards.
+ *   Same-origin normalization keeps staging/preview deploys self-contained.
+ * - View Transitions: emit the standard opt-in
+ *   `@view-transition { navigation: auto; }` plus a short crossfade duration
+ *   so the transition is subtle rather than the default 250ms cross-fade.
  *
  * Caveats
  * -------
@@ -103,6 +113,13 @@ function buildSpeculationRules(patterns: string[]): string {
   return `<script type="speculationrules">${JSON.stringify(rules)}</script>`;
 }
 
+const VIEW_TRANSITIONS_TAGS = [
+  '<meta name="view-transition" content="same-origin">',
+  '<style>@view-transition{navigation:auto}',
+  '::view-transition-old(root),::view-transition-new(root){animation-duration:120ms}',
+  '</style>',
+].join("");
+
 export default async (request: Request, context: Context) => {
   const response = await context.next();
 
@@ -115,10 +132,11 @@ export default async (request: Request, context: Context) => {
   const origin = new URL(request.url).origin;
   const navMatch = html.match(NAV_REGEX);
   const script = navMatch ? getCachedScript(navMatch[1], origin) : FALLBACK_SCRIPT;
+  const headInjection = `${VIEW_TRANSITIONS_TAGS}${script}`;
 
   const injected = html.includes("</head>")
-    ? html.replace("</head>", `${script}\n</head>`)
-    : script + html;
+    ? html.replace("</head>", `${headInjection}\n</head>`)
+    : headInjection + html;
 
   const headers = new Headers(response.headers);
   headers.delete("content-length");
