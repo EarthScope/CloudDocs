@@ -14,18 +14,17 @@ site:
     favicon: https://www.earthscope.org/app/uploads/2022/12/cropped-favicon-32x32.png
     logo: https://www.earthscope.org/app/uploads/2025/11/NSFNGF-Logo-RGB-Color.svg
     logo_dark: https://www.earthscope.org/app/uploads/2025/11/NSFNGF-Logo-RGB-White.svg
-    logo_url: https://docs.earthscope.org
+    logo_url: https://www.earthscope.org
     internal_domains: "docs.earthscope.org docs-earthscope-org.netlify.app"
 
   nav:
     - title: Docs Home
       url: /index
     - title: GeoLab
-      url: /onramp/geolab
-      # open_in_same_tab: true
+      url: /geolab
     - title: API
-      url: /data-access/API
-      # open_in_same_tab: true
+      url: /api
     - title: SDK
-      url: /data-access/SDK
-      # open_in_same_tab: true
+      url: /sdk
+    - title: CLI
+      url: /cli
