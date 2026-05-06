@@ -18,8 +18,8 @@ site:
     internal_domains: "docs.earthscope.org docs-earthscope-org.netlify.app"
 
   nav:
-    - title: Home
-      url: /
+    - title: Docs Home
+      url: /index
     - title: GeoLab
       url: /onramp/geolab
       # open_in_same_tab: true
