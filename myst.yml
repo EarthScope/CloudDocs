@@ -1,6 +1,6 @@
 version: 1
 extends:
-  - https://github.com/EarthScope/CloudDocs/blob/main/es_config/earthscope.yml
+  - ./es_config/earthscope.yml
 project:
   title: EarthScope Cloud Documentation Center
   copyright: '2024-2026'
