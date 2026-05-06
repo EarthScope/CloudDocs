@@ -3,7 +3,7 @@
   publish = "_build/html"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "24"
 
 [[edge_functions]]
   function = "inject-prefetch"
