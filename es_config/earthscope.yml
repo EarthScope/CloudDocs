@@ -15,16 +15,16 @@ site:
     logo: https://www.earthscope.org/app/uploads/2025/11/NSFNGF-Logo-RGB-Color.svg
     logo_dark: https://www.earthscope.org/app/uploads/2025/11/NSFNGF-Logo-RGB-White.svg
     logo_url: https://www.earthscope.org
-    internal_domains: "docs.earthscope.org docs-earthscope-org.netlify.app"
+    internal_domains: "docs.earthscope.org"
 
   nav:
     - title: Docs Home
-      url: /index
+      url: https://docs.earthscope.org
     - title: GeoLab
-      url: /geolab
-    - title: API
-      url: /api
-    - title: SDK
-      url: /sdk
+      url: https://docs.earthscope.org/geolab
     - title: CLI
-      url: /cli
+      url: https://docs.earthscope.org/cli
+    - title: API
+      url: https://docs.earthscope.org/api
+    - title: SDK
+      url: https://docs.earthscope.org/sdk
