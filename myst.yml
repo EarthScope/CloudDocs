@@ -1,11 +1,8 @@
 version: 1
 extends:
-  #TODO: update this to static github url
-  - ./es_config/earthscope.yml
+  - https://github.com/EarthScope/CloudDocs/blob/main/es_config/earthscope.yml
 project:
   title: EarthScope Cloud Documentation Center
-  # authors:
-  #   - name: EarthScope On-Ramp Project Group
   copyright: '2024-2026'
   github: EarthScope/CloudDocs
 
