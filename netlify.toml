@@ -21,8 +21,8 @@
 # /cli
 [[redirects]]
   from = "/cli"
-  to = "/cli/"
-  status = 301
+  to = "https://earthscope-cli.netlify.app/cli"
+  status = 200
   force = true
 
 [[redirects]]
