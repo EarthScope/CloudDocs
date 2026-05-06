@@ -13,8 +13,8 @@ project:
     - file: intro.md
     # - title: Getting Started
     #   children:
-    - file: content/user_account.md
-    - file: content/citation.md
+    - file: user_account.md
+    - file: citation.md
     # - title: EarthScope Cloud Resources
     #   children:
     #     - url: https://docs.earthscope.org/projects/GeoLab

@@ -1,9 +1,9 @@
 [build]
-  command = "jupyter book build --html"
+  command = "npm install -g mystmd && myst build --html"
   publish = "_build/html"
 
 [build.environment]
-  PYTHON_VERSION = "3.12"
+  NODE_VERSION = "20"
 
 # /onramp/geolab
 [[redirects]]
