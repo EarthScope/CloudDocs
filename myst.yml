@@ -8,5 +8,5 @@ project:
 
   toc:
     - file: content/intro.md
-    - file: user_account.md
-    - file: citation.md
+    - file: content/user_account.md
+    - file: content/citation.md
