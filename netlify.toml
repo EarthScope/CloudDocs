@@ -9,6 +9,18 @@
   function = "inject-prefetch"
   path = "/*"
 
+# Legacy GeoLab paths (old Read the Docs–style URLs) -> new /geolab/* layout
+[[redirects]]
+  from = "/projects/GeoLab/en/latest"
+  to = "/geolab"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/projects/GeoLab/en/latest/*"
+  to = "/geolab/:splat"
+  status = 301
+  force = true
+
 # /onramp/geolab
 [[redirects]]
   from = "/geolab"
