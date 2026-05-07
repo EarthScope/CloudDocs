@@ -10,13 +10,15 @@
   path = "/*"
 
 # Legacy GeoLab paths (old Read the Docs–style URLs) -> new /geolab/* layout
+# The old site nested everything under /content/; the new layout drops that segment.
 [[redirects]]
-  from = "/projects/GeoLab/en/latest"
+  from = "/projects/GeoLab/en/latest/content"
   to = "/geolab"
   status = 301
   force = true
+
 [[redirects]]
-  from = "/projects/GeoLab/en/latest/*"
+  from = "/projects/GeoLab/en/latest/content/*"
   to = "/geolab/:splat"
   status = 301
   force = true
