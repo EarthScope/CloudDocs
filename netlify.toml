@@ -74,3 +74,17 @@
   to = "https://earthscope-api.netlify.app/api/:splat"
   status = 200
   force = true
+
+# /service/seedlink
+[[redirects]]
+  from = "/service/seedlink"
+  to = "https://earthscope-seedlink-export-docs.netlify.app/service/seedlink"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/service/seedlink/*"
+  to = "https://earthscope-seedlink-export-docs.netlify.app/service/seedlink/:splat"
+  status = 200
+  force = true
+  
