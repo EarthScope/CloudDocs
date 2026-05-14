@@ -1,5 +1,5 @@
 [build]
-  command = "npm install -g mystmd && myst build --html"
+  command = "npm install -g mystmd@~1.9.0 && myst --version && myst build --html"
   publish = "_build/html"
 
 [build.environment]
@@ -65,14 +65,8 @@
 # /api
 [[redirects]]
   from = "/api"
-  to = "https://earthscope-api.netlify.app/api"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/api/*"
-  to = "https://earthscope-api.netlify.app/api/:splat"
-  status = 200
+  to = "https://api.earthscope.org/"
+  status = 301
   force = true
 
 # /service/seedlink
