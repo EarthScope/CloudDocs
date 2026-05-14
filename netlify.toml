@@ -1,6 +1,24 @@
 [build]
-  command = "npm install -g mystmd@~1.9.0 && myst --version && myst build --html"
   publish = "_build/html"
+#  command = "npm install -g mystmd@~1.9.0 && myst --version && myst build --html"
+  command = """
+    set -e
+
+    curl -fsSL https://bun.sh/install | bash
+    export PATH="$HOME/.bun/bin:$PATH"
+    bun --version
+
+    git clone --depth 1 --branch index-redirect-hydration \
+      https://github.com/chad-earthscope/mystmd.git ../mystmd-fork
+    (cd ../mystmd-fork && bun install && bun run build && bun run link)
+
+    # git clone --depth 1 --branch toc-baseurl-hydration \
+    #   https://github.com/chad-earthscope/myst-theme.git ../myst-theme-fork
+    # (cd ../myst-theme-fork && bun install && make build-book)
+
+    myst --version
+    myst build --html
+  """
 
 [build.environment]
   NODE_VERSION = "24"
