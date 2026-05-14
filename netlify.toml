@@ -5,10 +5,6 @@
 [build.environment]
   NODE_VERSION = "24"
 
-[[edge_functions]]
-  function = "inject-prefetch"
-  path = "/*"
-
 # Legacy GeoLab paths (old Read the Docs–style URLs) -> new /geolab/* layout
 # The old site nested everything under /content/; the new layout drops that segment.
 [[redirects]]
@@ -81,4 +77,4 @@
   to = "https://earthscope-seedlink-export-docs.netlify.app/service/seedlink/:splat"
   status = 200
   force = true
-  
+
